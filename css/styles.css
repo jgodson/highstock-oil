@@ -1,0 +1,40 @@
+body {
+	padding-top: 70px; /* For the navBar */
+	padding-bottom: 50px; /* For the footer */
+}
+
+.alert {
+	display: none;
+	position: fixed;
+	top: 0px;
+	z-index: 10000;
+	width: 100%;
+	text-align: center;
+}
+
+#loading {
+	z-index: 10000;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 100%;
+	color: white;
+	top: 0;
+	left: 0;
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+.container {
+	visibility: hidden;
+}
+
+#footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0px;
+	background-color: #3f51b5;
+	height: 50px;
+	color: white;
+	text-align: center;
+	padding-top: 10px;
+}
