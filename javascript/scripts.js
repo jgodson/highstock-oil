@@ -7,15 +7,15 @@ var $loading = $('#loading');
 var $main = $('.container');
 
 // Load data from the API
-function loadData () {
+function loadData() {
 	var req = new XMLHttpRequest();
 	req.open("GET", "https://www.quandl.com/api/v1/datasets/CHRIS/CME_CL1.json", true);
-	req.onreadystatechange = function () {
+	req.onreadystatechange = function() {
 		if (req.readyState === 4) {
 			if (req.status === 200) {
 				var chartData = JSON.parse(req.responseText);
 				$success.fadeIn();
-				setTimeout(function () {
+				setTimeout(function() {
 					$success.fadeOut();
 				}, 3000);
 				
@@ -32,7 +32,7 @@ function loadData () {
 			else {
 				$loading.fadeOut();
 				$error.fadeIn();
-				setTimeout(function () {
+				setTimeout(function() {
 					$error.fadeOut();
 				}, 3000);
 			}
@@ -42,7 +42,7 @@ function loadData () {
 }
 
 // Render chart using given data
-function renderChart (data) {
+function renderChart(data) {
 	// Get what we need out of the data for our chart
 	var parsedData = parseData(data);
 	// Create the chart
