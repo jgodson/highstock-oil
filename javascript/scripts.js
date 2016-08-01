@@ -22,7 +22,7 @@ function loadData() {
 				renderChart(chartData);
 				
 				// Populate main area with data from the latest data point in the array
-				$('#main h1').append(chartData.data[0][6] + ' USD'); // Closing Price
+				$('#main h1').append(chartData.data[0][6].toFixed(2) + ' USD'); // Closing Price
 				$('#main h5').append(chartData.data[0][0]); // Date of latest data point
 				
 				// Hide the loading div and show the content
